@@ -10,5 +10,46 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    font-family: Arial,
+    Helvetica,
+    sans-serif;
+    background-color: hsl(61, 98%, 50%);
     
-}
+    }
+    
+    .meal {}
+    
+    form {
+        height: 200px;
+        width: 100%;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        border: 2px yellow solid;
+    
+    }
+    
+    #result {
+        border: 5px rgb(180, 3, 3) solid;
+    
+    }
+    ul {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    div {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 5px 10px 5px;
+    
+    }
+    
+    .card {
+    
+        margin: 20px 0 20px 0;
+        border-radius: 15px;
+        border: 3px solid blue;
+        padding: 20px;
+    }

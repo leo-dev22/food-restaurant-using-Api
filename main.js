@@ -24,18 +24,26 @@ function mealsDisplay() {
           if (meal[`strIngredient${i}`]) {
             let ingredient = meal[`strIngredient${i}`];
             let measure = meal[`strMeasure${i}`];
-            ingredients.push(`<li>${ingredient} - ${measure} </li>`);
+            ingredients.push(`<span>${ingredient} - ${measure} </span>`);
           }
         }
         //console.log(ingredients);
 
-        return `
+        return `<ul>
       <li class="card">
-       <h3>${meal.strMeal}</h3>
-       <p>${meal.strArea}</p>
+      <div>
+      <h2>${meal.strMeal}</h2>
+      <h4>${meal.strArea}</h4>
+      </div>
        <img src=${meal.strMealThumb} alt=${meal.strMeal}>
-       <ul>${ingredients.join("")}</ul>
-      </li>
+       <div>
+       <p>INGREDIENTS: ${ingredients.join("")}</p>
+       <p>PREPARATIONS: ${meal.strInstructions}</p>
+       </div>
+       <a href="${
+         meal.strYoutube
+       }" target="_blank">Check out how to prepare your meal on this link</a>
+      </li></ul>
       `;
       })
       .join("");
